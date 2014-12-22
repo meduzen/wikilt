@@ -9,16 +9,23 @@
 + think about things that must be given with the kilt in order to accomplish the work (buckle, extensions…)
 + mail tracking: search "scottish parcel delivery service"
 
-+ personas names: http://www.namenerds.com/scottish/last.html
-+ personas pictures: https://www.flickr.com/photos/124897056@N07/14113231408
++ scottish names for personas: http://www.namenerds.com/scottish/last.html
++ personas pictures:
+++ http://www.clallamstorypeople.org/special-events/celtic-concert-music-stories/
+++ https://www.flickr.com/photos/124897056@N07/14113231408
+++ http://www.lucamoglia.it/it/galleries/places/edinburgh.html
 + tools to sew (for graphic inspiration)
 + error managment
 + grille responsive bootstrap ou foundation
++ mail template for the notification system
++ kilt request wizzard: show a kilt scheme, the user will mark wich part he needs. (http://www.scottishdance.net/highland/MakingKilt.html & http://members.iinet.net.au/~wgoonfan/Uniform.html)
++ send mail to friends (invite/suggestion…)
 
 ### UK address and phone number format
 
 http://www.royalmail.com/find-a-postcode
 http://www.postoffice.co.uk/how-to-address-mail
+http://www.postcodearea.co.uk/postaltowns/glasgow/g401hg/
 
 Mr Alan Smith (only for a person)
 Company (required for a company)

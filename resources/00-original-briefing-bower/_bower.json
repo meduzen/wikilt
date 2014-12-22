@@ -1,0 +1,31 @@
+{
+  "name": "ingrwf03-wiki",
+  "version": "0.0.1",
+  "homepage": "https://github.com/cepegra/ingrwf03",
+  "authors": [
+    "Thierry Michel <thmichel@gmail.com>"
+  ],
+  "description": "ingrwf03's first workshop @cepegra",
+  "keywords": [
+    "ingrwf",
+    "cepegra"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "_release": "0.0.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.0.1",
+    "commit": "1b9c60b5e9bfe4beb2350dd06f334a9d8ba8a36a"
+  },
+  "_source": "git://github.com/cepegra/ingrwf03.git",
+  "_target": "~0.0.1",
+  "_originalSource": "ingrwf03-wiki",
+  "_direct": true
+}

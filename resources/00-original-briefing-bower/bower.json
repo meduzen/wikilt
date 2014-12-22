@@ -1,0 +1,21 @@
+{
+  "name": "ingrwf03-wiki",
+  "version": "0.0.1",
+  "homepage": "https://github.com/cepegra/ingrwf03",
+  "authors": [
+    "Thierry Michel <thmichel@gmail.com>"
+  ],
+  "description": "ingrwf03's first workshop @cepegra",
+  "keywords": [
+    "ingrwf",
+    "cepegra"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
