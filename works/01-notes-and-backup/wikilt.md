@@ -8,6 +8,8 @@
 + mail tracking: search "scottish parcel delivery service"
 
 + scottish names for personas: http://www.namenerds.com/scottish/last.html
++ Types of request: define priorities
++ declined request: save it to use for another person
 + personas pictures:
 ++ http://www.clallamstorypeople.org/special-events/celtic-concert-music-stories/
 ++ https://www.flickr.com/photos/124897056@N07/14113231408
