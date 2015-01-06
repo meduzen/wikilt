@@ -1,0 +1,36 @@
+/* NAV */
+
+nav {
+
+    h1 {
+        margin: 0 auto;
+    }
+
+    .baseline {
+        margin: 0 auto 1em;
+    }
+
+    ul {
+        padding: 0;
+
+        a {
+            display: block;
+            width: 100%;
+            padding: 1em;
+
+            &:nth-child(2n) {
+                color: red;
+            }
+        }
+
+        li {
+
+            &:nth-child(n+2) {
+
+                a {
+                    border-top: 1px dotted $text-color;
+                }
+            }
+        }
+    }
+}

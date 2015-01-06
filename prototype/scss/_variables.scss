@@ -42,9 +42,15 @@ $space-s: 8px;
 /* COLORS GENERAL */
 
 $text-color: #555;
-$bg: #fff;
-$link: #000;
-$headline: #333;
+$bg-color: #fff;
+$link-color: #000;
+$headline-color: #333;
+
+/* PROTOTYPE COLORS */
+
+$bg-box: #f1f1f1;
+$bg-line: #ddd;
+$img-gradient: linear-gradient(to bottom right, transparent 0%, transparent 49%, $bg-line 49%,$bg-line 51%, transparent 51%, transparent 100%),linear-gradient(to bottom left, transparent 0%, transparent 49%, $bg-line 49%,$bg-line 51%, transparent 51%, transparent 100%);
 
 /* HEADLINES */
 

@@ -1,0 +1,25 @@
+nav {
+    text-align: center;
+
+    h1 {
+        font-size: 6rem;
+
+        a {
+            text-decoration: none;
+        }
+    }
+
+    .baseline {
+        font-family: $font-stack-head;
+    }
+
+    ul {
+        font-family: $font-stack-head;
+        list-style-type: none;
+
+        a {
+            text-decoration: none;
+            text-align: center;
+        }
+    }
+}

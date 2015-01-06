@@ -1,0 +1,85 @@
+/* SEARCH FORM(S) */
+
+// plus & minus (add & delete) buttons
+
+.form__controle {
+    color: $text-color;
+    font: 0/0 a;
+    text-decoration: none;
+
+    &::before {
+        font: 1.6rem/1.5 $font-stack;
+        text-align: center;
+    }
+
+    &::after {
+        font: 1.6rem/1.5 $font-stack;
+    }
+}
+
+.form__controle-delete {
+
+    &::before {
+        content:'-';
+    }
+
+    &:hover::after,
+    &:hover::focus {
+        content:'delete';
+    }
+}
+
+.form__controle-add {
+
+    font: 1.6rem/1.5 $font-stack;
+
+    &::before {
+        content:'+';
+    }
+
+    // &:hover::after,
+    // &:hover::focus {
+    //     content:'add';
+    // }
+}
+
+
+/* SEARCH A HELPER */
+
+form#search__helper {
+
+    // request type
+
+    fieldset.request__type {
+
+        legend {
+            text-align: center;
+        }
+
+        ul.request__type--reserve {
+            text-align: center;
+
+            a {
+                text-align: center;
+                text-decoration: none;
+            }
+        }
+    }
+    
+    // optional search
+
+    .search__optional {
+
+        &>fieldset legend {
+            text-align: center;
+        }
+
+        // geolocation
+        &.search__optional--geo {
+        }
+
+        // transport method
+        &.search__optional--transport {
+        }
+    }
+}

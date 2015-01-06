@@ -1,3 +1,44 @@
+/* GENERAL TYPO */
+
 html{
     font: normal 62.5%/1.5 $font-stack;
+    color: $text-color;
+    background: $bg-color;
+}
+
+a {
+    color: $link-color;
+    text-decoration: underline;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: $headline-color;
+    font-family: $font-stack-head;
+}
+
+body {
+    font-size: 1.6rem;
+}
+
+.switch-show {
+    text-align: right;
+
+    &::before {
+        content:'[+]';
+        text-decoration: none;
+    }
+}
+
+.switch-hide {
+    text-align: right;
+
+    &::before {
+        content:'[-] ';
+        text-decoration: none;
+    }
 }

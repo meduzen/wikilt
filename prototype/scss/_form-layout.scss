@@ -1,0 +1,119 @@
+fieldset {
+    margin: $space-s;
+    padding-left: 0;
+    padding-right: 0;
+    // border: 0;
+}
+
+/* SEARCH FORM(S) */
+
+// plus & minus (add & delete) buttons
+
+.form__controle {
+    position: relative;
+
+    &::before {
+        border: 1px solid $text-color;
+        padding: 0 .3em;
+    }
+
+    &:hover::after {
+        position: absolute;
+    }
+}
+
+.form__controle-delete {
+
+    float: right;
+
+    &:hover::after {
+        right: 2em;
+    }
+}
+
+.form__controle-add {
+
+    &::before {
+        margin: 0 1em;
+        padding: .5em;
+    }
+
+    // &:hover::after {
+    //     left: 2em;
+    // }
+}
+
+form.search {
+
+    margin-bottom: $space-s*2;
+
+    button {
+        margin: 0 auto;
+        display: block;
+        width: 15em;
+    }
+}
+
+/* SEARCH A HELPER */
+
+form#search__helper {
+
+    label {
+        display: block;
+    }
+
+    // request type
+
+    fieldset.request__type {
+
+        margin-bottom: $space-s*5;
+
+        ul.request__type--reserve {
+            padding: 0;
+
+            a {
+                display: block;
+                margin: .25em;
+                border: 1px solid $text-color;
+                width: 8em;
+                height: 3.5em;
+                float: left;
+                padding: .25em;
+            }
+
+            li {
+                display: inline-block;
+            }
+        }
+    }
+    
+    // optional search
+
+    .search__optional {
+
+        border: 1px solid $text-color;
+        margin-bottom: $space-s*2;
+
+        fieldset {
+            // display: none;
+            margin-bottom: $space-s*5;
+            border: 0;
+        }
+
+        .search__optional--geo {
+
+            .googlemap {
+                margin: 1em auto;
+                width: 100%;
+            }
+        }
+
+        .search__optional--transport {
+            margin-bottom: $space-s*0;
+
+            fieldset {
+                margin-bottom: $space-s*0;
+            }
+        }
+    }
+}

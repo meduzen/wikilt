@@ -1,9 +1,39 @@
+/* PROTOTYPE */
+
+fieldset {
+    background: $bg-box;
+}
+
+
+/* GENERAL LAYOUT */
+
+body {
+    max-width: 600px;
+    padding: $space-s/2;
+}
+
 img {
-    max-width: 100%;
-    height: auto;
+    background-image: $img-gradient;
+    // max-width: 100%;
+    // height: auto;
 }
 
 ul {
-    padding: 0;
+    // padding: 0;
     // list-style-type: none;
+}
+
+.none {
+    display: none;
+}
+
+
+.switch-show {
+    text-align: right;
+}
+
+.switch-hide {
+    display: block;
+    margin-right: 3em;
+
 }
