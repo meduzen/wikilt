@@ -4,11 +4,8 @@
 
 ### to do/think
 
-+ think about things that must be given with the kilt in order to accomplish the work (buckle, extensions…)
 + mail tracking: search "scottish parcel delivery service"
-
 + scottish names for personas: http://www.namenerds.com/scottish/last.html
-+ Types of request: define priorities
 + declined request: save it to use for another person
 + personas pictures:
 ++ http://www.clallamstorypeople.org/special-events/celtic-concert-music-stories/
@@ -19,10 +16,7 @@
 + grille responsive bootstrap ou foundation
 + mail template for the notification system
 + kilt request wizzard: show a kilt scheme, the user will mark wich part he needs. (http://www.scottishdance.net/highland/MakingKilt.html & http://members.iinet.net.au/~wgoonfan/Uniform.html)
-+ send mail to friends (invite/suggestion…)
-+ check error messages / validations
-+ account edit: which field?
-+ which rates should be displayed to others? => helper rate & requester rate
++ send mail to friends (invite a kilt sewer to wikilt/suggestion…)
 
 ### UK address and phone number format
 

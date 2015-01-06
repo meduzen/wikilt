@@ -1,0 +1,64 @@
+/* FONT-STACK */
+
+$font-stack: Georgia, 'Times New Roman', serif;
+$font-stack-head: Helvetica, Arial, sans-serif;
+
+/* BREAKPOINTS & SPACERS */
+
+$bp-s: 600px;
+$bp-m: 724px;
+$bp-l: 1000px;
+$bp-xl: 1280px;
+
+@mixin mq-s { // summon me with: @include mq-s {}
+  @media screen and (min-width: $bp-s) {
+    @content; 
+  }
+}
+
+@mixin mq-m { // summon me with: @include mq-m {}
+  @media screen and (min-width: $bp-m) {
+    @content; 
+  }
+}
+
+@mixin mq-l { // summon me with: @include mq-l {}
+  @media screen and (min-width: $bp-l) {
+    @content; 
+  }
+}
+
+@mixin mq-xl { // summon me with: @include mq-xl {}
+  @media screen and (min-width: $bp-xl) {
+    @content; 
+  }
+}
+
+$space-s: 8px;
+// $space-m: 8px;
+// $space-l: 8px;
+// $space-xl: 8px;
+
+/* COLORS GENERAL */
+
+$text-color: #555;
+$bg: #fff;
+$link: #000;
+$headline: #333;
+
+/* HEADLINES */
+
+
+
+/* LINKS */
+
+$link-on: #000;
+$link-active: #888;
+
+/* NAV */
+
+
+
+/* SHADOWS */
+
+$shadow-s: 0 5px 11px 0px lighten($text-color,10%);
