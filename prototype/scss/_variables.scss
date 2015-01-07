@@ -5,14 +5,24 @@ $font-stack-head: Helvetica, Arial, sans-serif;
 
 /* BREAKPOINTS & SPACERS */
 
-$bp-s: 600px;
-$bp-m: 724px;
-$bp-l: 1000px;
-$bp-xl: 1280px;
+// check http://responsivedesign.is/develop/getting-started-with-sass
 
-@mixin mq-s { // summon me with: @include mq-s {}
-  @media screen and (min-width: $bp-s) {
-    @content; 
+$bp-s: 32em; // 32 * 16px = 512px
+$bp-m: 48em; // 48 * 16px = 768px
+$bp-l: 64em; // 64 * 16px = 1024 px
+$bp-xl: 80em; // 80 * 16px = 1280 px
+
+@mixin mq($size) { // summon me with: @include mq-s {}
+  @if $size == s {
+    @media screen and (min-width: $bp-s) {
+      @content; 
+    }
+  }
+
+  @else if $size == m {
+    @media screen and (min-width: $bp-m) {
+      @content; 
+    }
   }
 }
 
@@ -51,6 +61,9 @@ $headline-color: #333;
 $bg-box: #f1f1f1;
 $bg-line: #ddd;
 $img-gradient: linear-gradient(to bottom right, transparent 0%, transparent 49%, $bg-line 49%,$bg-line 51%, transparent 51%, transparent 100%),linear-gradient(to bottom left, transparent 0%, transparent 49%, $bg-line 49%,$bg-line 51%, transparent 51%, transparent 100%);
+$form-delete: red;
+$color-no: #ffcec4;
+$color-yes: #edffc4;
 
 /* HEADLINES */
 

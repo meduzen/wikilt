@@ -8,8 +8,10 @@ fieldset {
 /* GENERAL LAYOUT */
 
 body {
-    max-width: 600px;
+    max-width: $bp-m;
     padding: $space-s/2;
+    margin: 0 auto;
+    border: 1px dotted #ddd;
 }
 
 img {
@@ -24,16 +26,16 @@ ul {
 }
 
 .none {
-    display: none;
+    display: none !important;
 }
 
 
-.switch-show {
-    text-align: right;
-}
-
-.switch-hide {
+.switch {
     display: block;
-    margin-right: 3em;
+    margin: $space-s;
 
+    &::before {
+        display: inline-block;
+        margin-right: .5em;
+    }
 }

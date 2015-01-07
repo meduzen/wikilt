@@ -4,6 +4,8 @@
 
 ### to do/think
 
++ professional search engine
++ mail validation after registration
 + mail tracking: search "scottish parcel delivery service"
 + scottish names for personas: http://www.namenerds.com/scottish/last.html
 + declined request: save it to use for another person

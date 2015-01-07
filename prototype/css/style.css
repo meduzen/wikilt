@@ -1,6 +1,8 @@
+@charset "UTF-8";
 /* FONT-STACK */
 /* BREAKPOINTS & SPACERS */
 /* COLORS GENERAL */
+/* PROTOTYPE COLORS */
 /* HEADLINES */
 /* LINKS */
 /* NAV */
@@ -372,15 +374,317 @@ th {
 
 /* NEXT COMMENT NEEDS TO BE CORRECTED */
 /* http://www.fontsquirrel.com / 2012-09-26 08:12:30 AM America/New_York */
+/* PROTOTYPE */
+fieldset {
+  background: #f1f1f1; }
+
+/* GENERAL LAYOUT */
+body {
+  max-width: 48em;
+  padding: 4px;
+  margin: 0 auto;
+  border: 1px dotted #ddd; }
+
 img {
-  max-width: 100%;
-  height: auto; }
+  background-image: linear-gradient(to bottom right, transparent 0%, transparent 49%, #ddd 49%, #ddd 51%, transparent 51%, transparent 100%), linear-gradient(to bottom left, transparent 0%, transparent 49%, #ddd 49%, #ddd 51%, transparent 51%, transparent 100%); }
 
-ul {
+.none {
+  display: none !important; }
+
+.switch {
+  display: block;
+  margin: 8px; }
+  .switch::before {
+    display: inline-block;
+    margin-right: .5em; }
+
+fieldset {
+  margin: 8px;
+  padding-left: 0;
+  padding-right: 0; }
+
+/* SEARCH FORM(S) */
+form.search {
+  margin-bottom: 16px; }
+  form.search button {
+    margin: 0 auto;
+    display: block;
+    width: 15em; }
+
+/* SEARCH A HELPER */
+form#search-helper label {
+  display: block; }
+form#search-helper fieldset.request__type {
+  margin-bottom: 40px; }
+  form#search-helper fieldset.request__type ul.request__type--selected {
+    margin-bottom: 40px; }
+    form#search-helper fieldset.request__type ul.request__type--selected li {
+      margin: 1em 0; }
+  form#search-helper fieldset.request__type ul.request__type--reserve {
+    padding: 0; }
+    form#search-helper fieldset.request__type ul.request__type--reserve a {
+      display: block;
+      margin: .25em;
+      border: 1px solid #555;
+      width: 8em;
+      height: 3.5em;
+      float: left;
+      padding: .25em; }
+    form#search-helper fieldset.request__type ul.request__type--reserve li {
+      display: inline-block; }
+  form#search-helper fieldset.request__type fieldset.request__type--sub ul {
+    padding: 0; }
+  form#search-helper fieldset.request__type fieldset.request__type--sub a {
+    display: block;
+    margin: .25em;
+    border: 1px solid #555;
+    width: 8em;
+    height: 3.5em;
+    float: left;
+    padding: .25em; }
+    form#search-helper fieldset.request__type fieldset.request__type--sub a.return {
+      font: 0/0 a;
+      border: none;
+      margin: auto;
+      float: none; }
+      form#search-helper fieldset.request__type fieldset.request__type--sub a.return::after {
+        content: '←';
+        display: block;
+        width: 4em;
+        height: 2.5em;
+        font: 1.6rem/1.5 Georgia, "Times New Roman", serif;
+        padding: .25em;
+        border: 1px solid #555; }
+  form#search-helper fieldset.request__type fieldset.request__type--sub li {
+    display: inline-block; }
+  form#search-helper fieldset.request__type a.request-delete {
+    position: relative;
+    float: right;
+    margin-right: 1em; }
+    form#search-helper fieldset.request__type a.request-delete::before {
+      border: 1px solid red;
+      margin-right: .5em;
+      padding: 0 .3em; }
+    form#search-helper fieldset.request__type a.request-delete:hover::after {
+      position: absolute;
+      right: 2em; }
+  form#search-helper fieldset.request__type a.request-add {
+    position: relative;
+    border: 1px dashed #555;
+    display: block;
+    margin: 0 auto;
+    padding: 0 .5em; }
+    form#search-helper fieldset.request__type a.request-add::before {
+      border: none;
+      padding: 0 .5em 0 0; }
+form#search-helper .search__optional {
+  border: 1px solid #555;
+  margin-bottom: 16px; }
+  form#search-helper .search__optional fieldset {
+    margin-bottom: 40px;
+    border: 0;
+    margin: auto; }
+  form#search-helper .search__optional .search__optional--geo a.geo-detect {
+    position: relative;
+    border: 1px dashed #555;
+    display: block;
+    margin: 16px auto 0;
+    padding: 0 .5em; }
+    form#search-helper .search__optional .search__optional--geo a.geo-detect::before {
+      border: none;
+      padding: 0 .5em 0 0; }
+  form#search-helper .search__optional .search__optional--geo [for="location"] {
+    margin: 1em auto; }
+    form#search-helper .search__optional .search__optional--geo [for="location"] input {
+      width: 100%;
+      height: 2em;
+      padding: 0 .5em; }
+  form#search-helper .search__optional .search__optional--geo .geo-town {
+    display: block; }
+  form#search-helper .search__optional .search__optional--geo .googlemap {
+    margin: 1em auto;
+    width: 100%; }
+  form#search-helper .search__optional .search__optional--transport {
+    margin-bottom: 0px; }
+    form#search-helper .search__optional .search__optional--transport fieldset {
+      margin-bottom: 0px; }
+    form#search-helper .search__optional .search__optional--transport label[for^='transport'] {
+      position: relative;
+      display: inline-block;
+      vertical-align: middle;
+      margin: .25em;
+      border: 1px solid #555;
+      width: 8em;
+      height: 7em;
+      padding: .25em;
+      z-index: 1; }
+      form#search-helper .search__optional .search__optional--transport label[for^='transport']:hover, form#search-helper .search__optional .search__optional--transport label[for^='transport']:focus {
+        border-width: 2px; }
+    form#search-helper .search__optional .search__optional--transport [type="checkbox"] {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: -1; }
+      form#search-helper .search__optional .search__optional--transport [type="checkbox"]::after {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: #ffcec4;
+        padding-top: 5em; }
+      form#search-helper .search__optional .search__optional--transport [type="checkbox"]:checked::after {
+        background: #edffc4; }
+    form#search-helper .search__optional .search__optional--transport li {
+      display: inline-block; }
+
+/* NAV */
+nav h1 {
+  margin: 0 auto; }
+nav .baseline {
+  margin: 0 auto 1em; }
+nav ul {
   padding: 0; }
+  nav ul a {
+    display: block;
+    width: 100%;
+    padding: 1em; }
+    @media screen and (min-width: 32em) {
+      nav ul a {
+        display: inline-block;
+        padding: 0 1em; } }
+  @media screen and (min-width: 32em) {
+    nav ul li {
+      display: inline-block; } }
+  nav ul li:nth-child(n+2) a {
+    border-top: 1px dotted #555; }
+    @media screen and (min-width: 32em) {
+      nav ul li:nth-child(n+2) a {
+        border-top: 0;
+        border-left: 1px dotted #555; } }
 
+/* GENERAL TYPO */
 html {
-  font: normal 62.5%/1.5 Georgia, "Times New Roman", serif; }
+  font: normal 62.5%/1.5 Georgia, "Times New Roman", serif;
+  color: #555;
+  background: #fff; }
+
+a {
+  color: #000;
+  text-decoration: underline; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #333;
+  font-family: Helvetica, Arial, sans-serif;
+  text-align: center;
+  text-transform: uppercase; }
+
+h2 {
+  font-size: 2.8rem; }
+
+body {
+  font-size: 1.6rem; }
+
+.switch {
+  font-size: 1.4rem;
+  text-align: right; }
+
+.switch--show::before {
+  content: '[+]'; }
+
+.switch--hide::before {
+  content: '[-]'; }
+
+legend {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 2rem; }
+
+/* SEARCH A HELPER */
+form#search-helper fieldset.request__type ul.request__type--reserve {
+  text-align: center; }
+  form#search-helper fieldset.request__type ul.request__type--reserve a {
+    text-decoration: none; }
+form#search-helper fieldset.request__type a.request-delete {
+  font: 0/0 a;
+  text-decoration: none;
+  color: red; }
+  form#search-helper fieldset.request__type a.request-delete::before {
+    content: '-';
+    font: 1.6rem/1.5 Georgia, "Times New Roman", serif;
+    text-align: center; }
+  form#search-helper fieldset.request__type a.request-delete::after {
+    font: 1.6rem/1.5 Georgia, "Times New Roman", serif; }
+  form#search-helper fieldset.request__type a.request-delete:hover::after, form#search-helper fieldset.request__type a.request-delete:focus::after {
+    content: 'delete'; }
+form#search-helper fieldset.request__type a.request-add {
+  text-decoration: none;
+  font: 1.6rem/2.5 Georgia, "Times New Roman", serif;
+  text-align: center; }
+  form#search-helper fieldset.request__type a.request-add::before {
+    content: '+';
+    font: 1.6rem/1.5 Georgia, "Times New Roman", serif;
+    text-align: center; }
+form#search-helper fieldset.request__type fieldset.request__type--sub {
+  text-align: center; }
+  form#search-helper fieldset.request__type fieldset.request__type--sub a {
+    text-decoration: none; }
+form#search-helper .search__optional .search__optional--geo a.geo-detect {
+  text-decoration: none;
+  font: 1.6rem/2.5 Georgia, "Times New Roman", serif;
+  text-align: center; }
+  form#search-helper .search__optional .search__optional--geo a.geo-detect::before {
+    content: '•••';
+    font: 1.6rem/1.5 Georgia, "Times New Roman", serif;
+    text-align: center; }
+form#search-helper .search__optional .search__optional--geo [for="location"] {
+  text-align: center; }
+  form#search-helper .search__optional .search__optional--geo [for="location"] input {
+    text-align: center; }
+form#search-helper .search__optional .search__optional--geo .geo-town {
+  text-align: center; }
+form#search-helper .search__optional .search__optional--transport fieldset {
+  text-align: center; }
+form#search-helper .search__optional .search__optional--transport .sub-legend {
+  text-transform: none;
+  text-align: left;
+  font-weight: normal; }
+form#search-helper .search__optional .search__optional--transport label[for^='transport'] {
+  text-align: center; }
+form#search-helper .search__optional .search__optional--transport [type="checkbox"]::after {
+  content: 'No';
+  text-align: center;
+  text-transform: uppercase;
+  font-family: Helvetica, Arial, sans-serif;
+  color: #911900; }
+form#search-helper .search__optional .search__optional--transport [type="checkbox"]:checked::after {
+  content: 'Yes';
+  color: #659100; }
+form#search-helper button {
+  line-height: 2.5; }
+
+nav {
+  text-align: center; }
+  nav h1 {
+    font-size: 6rem; }
+    nav h1 a {
+      text-decoration: none; }
+  nav .baseline {
+    font-family: Helvetica, Arial, sans-serif; }
+  nav ul {
+    font-family: Helvetica, Arial, sans-serif;
+    list-style-type: none; }
+    nav ul a {
+      text-decoration: none;
+      text-align: center; }
 
 a.social-sprite {
   font: 0/0 a; }

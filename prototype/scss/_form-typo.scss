@@ -1,66 +1,72 @@
-/* SEARCH FORM(S) */
-
-// plus & minus (add & delete) buttons
-
-.form__controle {
-    color: $text-color;
-    font: 0/0 a;
-    text-decoration: none;
-
-    &::before {
-        font: 1.6rem/1.5 $font-stack;
-        text-align: center;
-    }
-
-    &::after {
-        font: 1.6rem/1.5 $font-stack;
-    }
-}
-
-.form__controle-delete {
-
-    &::before {
-        content:'-';
-    }
-
-    &:hover::after,
-    &:hover::focus {
-        content:'delete';
-    }
-}
-
-.form__controle-add {
-
-    font: 1.6rem/1.5 $font-stack;
-
-    &::before {
-        content:'+';
-    }
-
-    // &:hover::after,
-    // &:hover::focus {
-    //     content:'add';
-    // }
-}
+        legend {
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 2rem;
+        }
 
 
 /* SEARCH A HELPER */
 
-form#search__helper {
+
+form#search-helper {
 
     // request type
 
     fieldset.request__type {
 
-        legend {
-            text-align: center;
+        ul.request__type--selected {
+            
         }
+
 
         ul.request__type--reserve {
             text-align: center;
 
             a {
+                text-decoration: none;
+            }
+        }
+
+        // plus & minus (add & delete) buttons
+
+        a.request-delete {
+            font: 0/0 a;
+            text-decoration: none;
+            color: red;
+
+            &::before {
+                content:'-';
+                font: 1.6rem/1.5 $font-stack;
                 text-align: center;
+            }
+
+            &::after {
+                font: 1.6rem/1.5 $font-stack;
+            }
+
+            &:hover::after,
+            &:focus::after {
+                content:'delete';
+            }
+        }
+
+        a.request-add {
+            text-decoration: none;
+            font: 1.6rem/2.5 $font-stack;
+            text-align: center;
+
+            &::before {
+                content:'+';
+                font: 1.6rem/1.5 $font-stack;
+                text-align: center;
+            }
+        }
+
+        fieldset.request__type--sub {
+            text-align: center;
+
+            a {
                 text-decoration: none;
             }
         }
@@ -70,16 +76,71 @@ form#search__helper {
 
     .search__optional {
 
-        &>fieldset legend {
-            text-align: center;
-        }
-
         // geolocation
-        &.search__optional--geo {
+        .search__optional--geo {
+
+            a.geo-detect {
+                text-decoration: none;
+                font: 1.6rem/2.5 $font-stack;
+                text-align: center;
+
+                &::before {
+                    content:'•••';
+                    font: 1.6rem/1.5 $font-stack;
+                    text-align: center;
+                }
+            }
+
+            [for="location"] {
+                text-align: center;
+
+                input {
+                    text-align: center;
+                }
+            }
+
+            .geo-town {
+                text-align: center;
+            }
+
         }
 
         // transport method
-        &.search__optional--transport {
+        .search__optional--transport {
+
+            fieldset {
+                text-align: center;
+            }
+
+            .sub-legend {
+                text-transform: none;
+                text-align: left;
+                font-weight: normal;
+            }
+
+            label[for^='transport'] {
+                text-align: center;
+            }
+
+            [type="checkbox"] {
+
+                &::after {
+                    content:'No';
+                    text-align: center;
+                    text-transform: uppercase;
+                    font-family: $font-stack-head;
+                    color: darken($color-no,60%);
+                }
+
+                &:checked::after {
+                    content:'Yes';
+                    color: darken($color-yes,60%);
+                }
+            }
         }
+
+    }
+    button {
+        line-height: 2.5;
     }
 }

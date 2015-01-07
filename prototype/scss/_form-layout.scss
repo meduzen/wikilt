@@ -7,41 +7,7 @@ fieldset {
 
 /* SEARCH FORM(S) */
 
-// plus & minus (add & delete) buttons
-
-.form__controle {
-    position: relative;
-
-    &::before {
-        border: 1px solid $text-color;
-        padding: 0 .3em;
-    }
-
-    &:hover::after {
-        position: absolute;
-    }
-}
-
-.form__controle-delete {
-
-    float: right;
-
-    &:hover::after {
-        right: 2em;
-    }
-}
-
-.form__controle-add {
-
-    &::before {
-        margin: 0 1em;
-        padding: .5em;
-    }
-
-    // &:hover::after {
-    //     left: 2em;
-    // }
-}
+// general  form
 
 form.search {
 
@@ -56,7 +22,7 @@ form.search {
 
 /* SEARCH A HELPER */
 
-form#search__helper {
+form#search-helper {
 
     label {
         display: block;
@@ -67,6 +33,14 @@ form#search__helper {
     fieldset.request__type {
 
         margin-bottom: $space-s*5;
+
+        ul.request__type--selected {
+            margin-bottom: $space-s * 5;
+
+            li {
+                margin: 1em 0;
+            }
+        }
 
         ul.request__type--reserve {
             padding: 0;
@@ -85,6 +59,76 @@ form#search__helper {
                 display: inline-block;
             }
         }
+
+        fieldset.request__type--sub {
+
+            ul {
+                padding: 0;
+            }
+
+            a {
+                display: block;
+                margin: .25em;
+                border: 1px solid $text-color;
+                width: 8em;
+                height: 3.5em;
+                float: left;
+                padding: .25em;
+
+                &.return {
+                    font: 0/0 a;
+                    border: none;
+                    margin: auto;
+                    float: none;
+
+                    &::after {
+                        content: '←';
+                        display: block;
+                        width: 4em;
+                        height: 2.5em;
+                        font: 1.6rem/1.5 $font-stack;
+                        padding: .25em;
+                        border: 1px solid $text-color;
+                    }
+                }
+            }
+
+            li {
+                display: inline-block;
+            }
+        }
+
+        // plus & minus (add & delete) buttons
+
+        a.request-delete {
+            position: relative;
+            float: right;
+            margin-right: 1em;
+
+            &::before {
+                border: 1px solid $form-delete;
+                margin-right: .5em;
+                padding: 0 .3em;
+            }
+
+            &:hover::after {
+                position: absolute;
+                right: 2em;
+            }
+        }
+
+        a.request-add {
+            position: relative;
+            border: 1px dashed $text-color;
+            display: block;
+            margin: 0 auto;
+            padding: 0 .5em;
+
+            &::before {
+                border: none;
+                padding: 0 .5em 0 0;
+            }
+        }
     }
     
     // optional search
@@ -98,9 +142,37 @@ form#search__helper {
             // display: none;
             margin-bottom: $space-s*5;
             border: 0;
+            margin: auto;
         }
 
         .search__optional--geo {
+
+            a.geo-detect {
+                position: relative;
+                border: 1px dashed $text-color;
+                display: block;
+                margin: $space-s*2 auto 0;
+                padding: 0 .5em;
+
+                &::before {
+                    border: none;
+                    padding: 0 .5em 0 0;
+                }
+            }
+
+            [for="location"] {
+                margin: 1em auto;
+
+                input {
+                    width: 100%;
+                    height: 2em;
+                    padding: 0 .5em;
+                }
+            }
+
+            .geo-town {
+                display: block;
+            }
 
             .googlemap {
                 margin: 1em auto;
@@ -113,6 +185,55 @@ form#search__helper {
 
             fieldset {
                 margin-bottom: $space-s*0;
+            }
+
+            label[for^='transport'] {
+                position: relative;
+                display: inline-block;
+                vertical-align: middle;
+                margin: .25em;
+                border: 1px solid $text-color;
+                width: 8em;
+                height: 7em;
+                // float: left;
+                padding: .25em;
+                z-index: 1; // required for checkbox background
+
+                &:hover,
+                &:focus {
+                    border-width: 2px;
+                }
+
+                // &:active {
+                //     border-width: 2px;
+                // }
+            }
+
+            [type="checkbox"] {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                z-index: -1; // required for checkbox background
+
+                &::after {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    background: $color-no;
+                    padding-top: 5em;
+                }
+
+                &:checked::after {
+                    background: $color-yes;
+                }
+            }
+
+            li {
+                display: inline-block;
             }
         }
     }
