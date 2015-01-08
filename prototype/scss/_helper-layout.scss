@@ -1,0 +1,69 @@
+.helpers__list {
+
+    padding: 0;
+
+    .helper {
+
+        a.helper__ask {
+            display: block;
+            line-height: 2.5;
+            width: 15em;
+            margin: 1em auto;
+            border: 1px solid $text-color;
+            padding: .75em;
+        }
+
+        img.helper__pic {
+            float: left;
+            margin: 0 1em 1em 0;
+        }
+
+        h4 {
+            clear: both;
+        }
+    }
+
+    .location__distance {
+
+        a.map-pin {
+
+
+
+            svg {
+                border: 1px solid $text-color;
+                width: 2em;
+                height: 1em;
+            }
+        }
+    }
+
+    .helper--pro {
+
+    }
+
+    .requested {
+        padding: 0;
+
+        li {
+            display: inline;
+            padding: .25em .75em;
+            border-radius: .75em;
+        }
+    }
+
+    .requested-no {
+        padding: 0;
+
+        li {
+            background: $color-no;
+        }
+    }
+
+    .requested-yes {
+        padding: 0;
+
+        li {
+            background: $color-yes;
+        }
+    }
+}

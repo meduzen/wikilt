@@ -4,11 +4,14 @@ fieldset {
     background: $bg-box;
 }
 
+.helpers__list {
+    background: $bg-box;
+}
+
 
 /* GENERAL LAYOUT */
 
 body {
-    max-width: $bp-m;
     padding: $space-s/2;
     margin: 0 auto;
     border: 1px dotted #ddd;
@@ -32,7 +35,7 @@ ul {
 
 .switch {
     display: block;
-    margin: $space-s;
+    margin: $space-s*4;
 
     &::before {
         display: inline-block;

@@ -1,25 +1,38 @@
 nav {
     text-align: center;
 
-    h1 {
-        font-size: 6rem;
+    .logo {
 
-            // @include mq(m) {
-            //     text-align: left;
-            // }
-
-        a {
-            text-decoration: none;
+        @include mq(l) {
+            width: 50%;
+            padding-right: 21em;
+            text-align: right;
         }
-    }
 
-    .baseline {
-        font-family: $font-stack-head;
+        h1 {
+            font-size: 6rem;
+
+            @include mq(l) {
+                text-align: right;
+            }
+
+            a {
+                text-decoration: none;
+            }
+        }
+
+        .baseline {
+            font-family: $font-stack-head;
+        }
     }
 
     ul {
         font-family: $font-stack-head;
         list-style-type: none;
+
+        @include mq(l) {
+            text-align: left;
+        }
 
         a {
             text-decoration: none;

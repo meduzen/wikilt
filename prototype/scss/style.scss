@@ -1,12 +1,25 @@
 @charset "UTF-8";
+
 @import 'variables';
 @import 'normalize';
 @import 'reset';
-@import 'font';
+@import 'font'; // try to move this one at the end
+
+/* LAYOUT */
+
 @import 'layout';
-@import 'form-layout';
 @import 'header-layout';
+@import 'form-layout';
+@import 'helper-layout';
+
+/* TYPO */
+
 @import 'typo';
-@import 'form-typo';
 @import 'header-typo';
+@import 'form-typo';
+@import 'helper-typo';
+
+/* API & SOCIAL */
+
+@import 'api';
 @import 'social';

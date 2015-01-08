@@ -1,0 +1,56 @@
+.helpers__list {
+
+    list-style-type: none;
+
+    .helper {
+        h3,
+        h4 {
+            text-transform: none;
+        }
+
+        h4 {
+            font-weight: normal;
+        }
+
+        a {
+            text-decoration: none;
+        }
+    }
+
+    .helper--pro {
+
+    }
+
+    .requested {
+        list-style-type: none;
+
+        li {
+            font-family: $font-stack-head;
+
+            &::before {
+                margin-right: .25em;
+            }
+        }
+    }
+
+    .requested-no {
+
+        li {
+
+            &::before {
+                content: 'x ';
+                color: darken($color-no,10%);
+            }
+        }
+    }
+    .requested-yes {
+
+        li {
+
+            &::before {
+                content: 'x ';
+                color: darken($color-yes,40%);
+            }
+        }
+    }
+}

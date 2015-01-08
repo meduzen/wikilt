@@ -2,24 +2,42 @@
 
 nav {
 
-    h1 {
-        margin: 0 auto;
-    }
+    .logo {
 
-    .baseline {
-        margin: 0 auto 1em;
+        @include mq(m) {
+            width: 15em;
+        }
+
+        @include mq(l) {
+            width: 50%;
+            padding-right: 21em;
+        }
+
+        h1 {
+            margin: 0 auto;
+        }
+
+        .baseline {
+            margin: 0 auto 1em;
+        }
     }
 
     ul {
         padding: 0;
 
-        // @include mq(s) {
-        //     display: inline-block;
-        //     padding: 0 1em;
-        //     position: absolute;
-        //     top: 0;
-        //     right: 0;
-        // }
+        @include mq(m) {
+            // display: inline-block;
+            padding: 2em 2em;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+        @include mq(l) {
+            padding: 0 1em;
+            left: 50%;
+            margin-left: 9em;
+        }
 
         a {
             display: block;

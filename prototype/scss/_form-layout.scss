@@ -26,6 +26,7 @@ form#search-helper {
 
     label {
         display: block;
+        width: 100%;
     }
 
     // request type
@@ -35,15 +36,38 @@ form#search-helper {
         margin-bottom: $space-s*5;
 
         ul.request__type--selected {
+            padding: $space-s;
+            list-style-type: none;
             margin-bottom: $space-s * 5;
 
             li {
                 margin: 1em 0;
+                padding: .25em .5em;
+                border: 1px dotted $text-color;
+
+                @include mq(m) {
+                    width: 48%;
+                    float: left;
+                    margin-right: 2%;
+                    border: 1px dotted $text-color; 
+                }
+
+                @include mq(l) {
+                    width: 31%;
+                    margin-right: 1em;
+                }
+            }
+
+            @include mq (m) {
+                margin-bottom: 0;
+                padding-bottom: 0;
+                width: 100%;
             }
         }
 
         ul.request__type--reserve {
             padding: 0;
+            clear: both;
 
             a {
                 display: block;
@@ -103,11 +127,9 @@ form#search-helper {
         a.request-delete {
             position: relative;
             float: right;
-            margin-right: 1em;
 
             &::before {
                 border: 1px solid $form-delete;
-                margin-right: .5em;
                 padding: 0 .3em;
             }
 
@@ -122,11 +144,23 @@ form#search-helper {
             border: 1px dashed $text-color;
             display: block;
             margin: 0 auto;
-            padding: 0 .5em;
+            padding: 0 .25em;
 
             &::before {
                 border: none;
                 padding: 0 .5em 0 0;
+            }
+
+            @include mq(m) {
+                display: inline-block;
+                width: 48%;
+                float: left;
+                margin: 1em 0;
+            }
+
+            @include mq(l) {
+                width: 31%;
+                // vertical-align: top;
             }
         }
     }
@@ -137,12 +171,22 @@ form#search-helper {
 
         border: 1px solid $text-color;
         margin-bottom: $space-s*2;
+        width: 100%;
+
+        @include mq(l) {
+            padding-bottom: 1px;
+        }
 
         fieldset {
-            // display: none;
             margin-bottom: $space-s*5;
             border: 0;
             margin: auto;
+
+            @include mq(l) {
+                width: 48%;
+                float: left;
+                margin: 1%;
+            }
         }
 
         .search__optional--geo {
@@ -158,6 +202,18 @@ form#search-helper {
                     border: none;
                     padding: 0 .5em 0 0;
                 }
+
+                @include mq(m) {
+                    width: 48%;
+                    display: inline-block;
+                    border: 1px dotted $text-color;
+                    vertical-align: top;
+                }
+
+                @include mq(l) {
+                    width: 33%;
+                    margin: 1em;
+                }
             }
 
             [for="location"] {
@@ -167,6 +223,16 @@ form#search-helper {
                     width: 100%;
                     height: 2em;
                     padding: 0 .5em;
+                }
+
+                @include mq(m) {
+                    width: 48%;
+                    display: inline-block;
+                }
+
+                @include mq(l) {
+                    width: 33%;
+                    margin-right: 1em;
                 }
             }
 
@@ -185,6 +251,13 @@ form#search-helper {
 
             fieldset {
                 margin-bottom: $space-s*0;
+
+                @include mq(m) {
+                    padding: .25em;
+                    width: 48%;
+                    display: inline-block;
+                    vertical-align: top;
+                }
             }
 
             label[for^='transport'] {

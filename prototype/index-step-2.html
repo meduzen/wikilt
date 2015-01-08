@@ -1,0 +1,117 @@
+<svg display="none" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+    <symbol id="google-map-pin" viewBox="0 0 2481 2073">
+    <title>Google Maps Pin</title>
+    <g>
+        <path d="m730.940002,1839.630005c-38.765991,-190.300049 -107.116028,-348.670044 -189.903015,-495.440063c-61.406982,-108.869995 -132.543976,-209.359985 -198.363983,-314.939941c-21.972015,-35.242981 -40.93399,-72.476013 -62.046997,-109.052979c-42.216003,-73.137024 -76.444,-157.934998 -74.269012,-267.932007c2.125,-107.473022 33.208008,-193.684021 78.029999,-264.172028c73.718994,-115.934998 197.201019,-210.988983 362.884003,-235.968994c135.466003,-20.423996 262.474976,14.082001 352.54303,66.748001c73.596008,43.03801 130.596008,100.526993 173.915955,168.280014c45.219971,70.716003 76.359985,154.259979 78.969971,263.231964c1.340088,55.830017 -7.799927,107.532043 -20.679932,150.41803c-13.030029,43.408997 -33.98999,79.695007 -52.640015,118.453979c-36.410034,75.658997 -82.050049,144.984009 -127.859985,214.343994c-136.437012,206.609985 -264.496033,417.310059 -320.580017,706.030029z" stroke-width="37" stroke-miterlimit="10" fill-rule="evenodd" fill="#c92a2a" clip-rule="evenodd" id="svg_2"/>
+        <circle r="183.333" cy="651.047" cx="729.546" fill-rule="evenodd" fill="#ffffff" clip-rule="evenodd" id="svg_4"/>
+    </g>
+    </symbol>
+    </defs>
+</svg>
+
+<main>
+    <h2>2 Helpers around Livingston (EH54)</h2>
+    <!-- <h2>2 Helpers for your kilt</h2> -->
+    <iframe class="googlemap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d573979.6514869654!2d-3.9785353749683763!3d55.80872517378068!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x488815562056ceeb%3A0x71e683b805ef511e!2sGlasgow%2C+Royaume-Uni!5e0!3m2!1sfr!2sbe!4v1420547813666" width="400" height="300" style="border:0"></iframe>
+
+    <p>Sort results: <a href="">best matching</a>, <a href="">distance</a>, <a href="">rating</a></p> <!-- complete this -->
+    <ul class="helpers__list">
+        <li class="helper">
+            <h3>M<sup>r</sup> Campbell</h3>
+            <img class="helper__pic" src="." width="90" height="120" alt="Mr Campbell's picture">
+            <p class="location__distance">8 miles from Glasgow <a class="map-pin" href="" alt="See this helper on the map"><svg class="map-pin"><use xlink:href="#google-map-pin" /></svg></a></p> <!-- think about microformat & html distance -->
+            <p class="location__town">Newbridge</p>
+            <h4>What M<sup>r</sup> Campbell can do for your kilt</h4>
+            <ul class="requested requested-yes">
+                <li>Buckle extension</li>
+                <li>Sporran repair</li>
+            </ul>
+            <a class="helper__ask" href=""><strong>Request his/her talent</strong></a>
+        </li>
+        <li class="helper helper--pro">
+            <h3>Kinloch Anderson</h3>
+            <img class="helper__pic" src="." width="90" height="120" alt="Picture of Kinloch Anderson's shop">
+            <p class="location__town">Edinburgh</p>
+            <p class="location__distance">15 miles from Glasgow <a class="map-pin" href="" alt="See this helper on the map"><svg class="map-pin"><use xlink:href="#google-map-pin" /></svg></a></p>
+            <h4>What Kinloch Anderson can do for your kilt</h4>
+            <ul class="requested requested-yes">
+                <li>Buckle extension</li>
+                <li>Sporran repair</li>
+            </ul>
+            <a class="helper__ask" class="helper__ask" href=""><strong>Request his/her talent</strong></a>
+        </li>
+        <li class="helper">
+            <h3>M<sup>r</sup> Campbell</h3>
+            <img class="helper__pic" src="." width="90" height="120" alt="'s picture">
+            <p class="location__town">Newbridge</p>
+            <p class="location__distance">8 miles from Glasgow</p>
+            <h4>What M<sup>r</sup> Campbell <strong>can't</strong> do for your kilt</h4>
+            <ul class="requested requested-no">
+                <li>Sporran repair</li>
+            </ul>
+            <h4>What M<sup>r</sup> Campbell <strong>can</strong> do for your kilt</h4>
+            <ul class="requested requested-yes">
+                <li>Buckle extension</li>
+            </ul>
+            <a class="helper__ask" href=""><strong>Request his/her talent</strong></a>
+        </li>
+    </ul>
+
+
+
+
+
+    <form id="search-helper" class="none search" action="#" method="get">
+        <!-- repair types -->
+        <fieldset class="request__type">
+            <legend>Pick service(s)</legend>
+            <ul class="none request__type--selected">
+                <li>Buckles and straps extenders <a class="request-delete" href="">delete</a>
+                <li>Sporran repair <a class="request-delete" href="">delete</a>
+            </ul>
+            <a class="none request-add" href="">Add element</a>
+            <ul class="request__type--reserve"><!-- todo: add subcategories -->
+                <li><a href="./index-step-1.php">Kilt size alterations</a></li>
+                <li><a href="./index-step-1.php">Kilt repair</a></li>
+                <li><a href="./index-step-1.php">Belt</a></li>
+                <li><a href="./index-step-1.php">Buckles and straps</a></li>
+                <li><a href="./index-step-1.php">Sporran</a></li>
+                <li><a href="./index-step-1.php">Others / I don’t know</a></li>
+            </ul>
+        </fieldset>
+
+        <!-- search options -->
+        <a class="switch switch--hide" href="./index-step-1.html">Show Geolocation and Transport options</a>
+        <div class="search__optional">
+
+            <!-- geolocation -->
+            <fieldset class="search__optional--geo">
+                <legend>Find helpers around me</legend>
+                <a class="geo-detect" href="">Detect my location</a>
+                <label for="location">or enter postcode or town/city:<input type="text" name="location" id="location" placeholder="e.g. &#39;G40 1HG&#39; or &#39;Glasgow&#39;"></label>
+                <p class="geo-town"><strong>Glasgow</strong> (G40&nbsp;1HG)</p>
+            </fieldset>
+
+            <!-- transport -->
+            <fieldset class="search__optional--transport">
+                <legend>Transport method</legend>
+                <p>The more you can choose, the best results you'll have</p>
+                <fieldset>
+                    <legend class="sub-legend">The way you can transmit the kilt to the helper</legend>
+                    <label for ="transport-bring">I can bring it to the helper<input type="checkbox" checked name="transport-bring" id="transport-bring"></label>
+                    <label for ="transport-pick">The helper can pick the kilt at my home<input type="checkbox" checked name="transport-pick" id="transport-pick"></label>
+                    <label for ="transport-post">I'll send my kilt by post<input type="checkbox" name="transport-post" id="transport-post"></label>
+                </fieldset>
+                <fieldset>
+                    <legend class="sub-legend">The way you'd like to get your kilt back</legend>
+                    <label for ="transport-pick-done">I can get it back at the helper<input type="checkbox" checked name="transport-pick-done" id="transport-pick-done"></label>
+                    <label for ="transport-bring-done">The helper can bring it back to me<input type="checkbox" checked name="transport-bring-done" id="transport-bring-done"></label>
+                    <label for ="transport-post-done">Use post<input type="checkbox" name="transport-post-done" id="transport-post-done"></label>
+                </fieldset>
+            </fieldset>
+        </div>
+
+        <button>Search helpers</button>
+    </form>
+</main>

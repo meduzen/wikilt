@@ -16,7 +16,11 @@ form#search-helper {
     fieldset.request__type {
 
         ul.request__type--selected {
-            
+            text-align: center;
+
+            li {
+                text-align: left;
+            }
         }
 
 
@@ -53,7 +57,7 @@ form#search-helper {
 
         a.request-add {
             text-decoration: none;
-            font: 1.6rem/2.5 $font-stack;
+            font: 1.6rem/2 $font-stack;
             text-align: center;
 
             &::before {
@@ -103,6 +107,9 @@ form#search-helper {
                 text-align: center;
             }
 
+            @include mq(l) {
+                text-align: center;
+            }
         }
 
         // transport method
@@ -112,10 +119,18 @@ form#search-helper {
                 text-align: center;
             }
 
+            p {
+                text-align: center;
+            }
+
             .sub-legend {
                 text-transform: none;
                 text-align: left;
                 font-weight: normal;
+
+                @include mq(m) {
+                    text-align: center;
+                }
             }
 
             label[for^='transport'] {

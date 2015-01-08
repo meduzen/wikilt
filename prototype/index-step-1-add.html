@@ -12,7 +12,14 @@
                 <li>Buckles and straps extenders <a class="request-delete" href="">delete</a></li>
                 <li>Sporran repair <a class="request-delete" href="">delete</a></li>
             </ul>
-            <a class="request-add" href="./index-step-1-add.php">Add elements</a>
+            <ul class="request__type--reserve"><!-- todo: add subcategories -->
+                <li><a href="">Kilt size alterations</a></li>
+                <li><a href="">Kilt repair</a></li>
+                <li><a href="">Belt</a></li>
+                <li><a href="">Buckles and straps</a></li>
+                <li><a href="">Sporran</a></li>
+                <li><a href="">Others / I don’t know</a></li>
+            </ul>
         </fieldset>
 
         <!-- search options -->
@@ -32,13 +39,13 @@
                 <legend>Transport method</legend>
                 <p>The more you can choose, the best results you'll have</p>
                 <fieldset>
-                    <legend class="sub-legend">How to pass the kilt to the helper?</legend>
+                    <legend class="sub-legend">The way you can transmit the kilt to the helper</legend>
                     <label for ="transport-bring">I can bring it to the helper<input type="checkbox" checked name="transport-bring" id="transport-bring"></label>
                     <label for ="transport-pick">The helper can pick the kilt at my home<input type="checkbox" checked name="transport-pick" id="transport-pick"></label>
                     <label for ="transport-post">I'll send my kilt by post<input type="checkbox" name="transport-post" id="transport-post"></label>
                 </fieldset>
                 <fieldset>
-                    <legend class="sub-legend">How to get your kilt back?</legend>
+                    <legend class="sub-legend">The way you'd like to get your kilt back</legend>
                     <label for ="transport-pick-done">I can get it back at the helper<input type="checkbox" checked name="transport-pick-done" id="transport-pick-done"></label>
                     <label for ="transport-bring-done">The helper can bring it back to me<input type="checkbox" checked name="transport-bring-done" id="transport-bring-done"></label>
                     <label for ="transport-post-done">Use post<input type="checkbox" name="transport-post-done" id="transport-post-done"></label>

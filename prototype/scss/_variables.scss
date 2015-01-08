@@ -11,36 +11,27 @@ $bp-s: 32em; // 32 * 16px = 512px
 $bp-m: 48em; // 48 * 16px = 768px
 $bp-l: 64em; // 64 * 16px = 1024 px
 $bp-xl: 80em; // 80 * 16px = 1280 px
+$bp-xxl: 100em; // 100 * 16px = 1600 px
 
-@mixin mq($size) { // summon me with: @include mq-s {}
+@mixin mq($size) { // summon me with: @include mq {s/m/l/xl/xxl}
   @if $size == s {
-    @media screen and (min-width: $bp-s) {
-      @content; 
-    }
+    @media screen and (min-width: $bp-s) { @content; }
   }
 
   @else if $size == m {
-    @media screen and (min-width: $bp-m) {
-      @content; 
-    }
+    @media screen and (min-width: $bp-m) { @content; }
   }
-}
 
-@mixin mq-m { // summon me with: @include mq-m {}
-  @media screen and (min-width: $bp-m) {
-    @content; 
+  @else if $size == l {
+    @media screen and (min-width: $bp-l) { @content; }
   }
-}
 
-@mixin mq-l { // summon me with: @include mq-l {}
-  @media screen and (min-width: $bp-l) {
-    @content; 
+  @else if $size == xl {
+    @media screen and (min-width: $bp-xl) { @content; }
   }
-}
 
-@mixin mq-xl { // summon me with: @include mq-xl {}
-  @media screen and (min-width: $bp-xl) {
-    @content; 
+  @else if $size == xxl {
+    @media screen and (min-width: $bp-xxl) { @content; }
   }
 }
 
