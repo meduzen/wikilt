@@ -12,8 +12,62 @@
             font-weight: normal;
         }
 
-        a {
+        a.helper__ask {
             text-decoration: none;
+            text-align: center;
+        }
+
+        .rating {
+            text-transform: uppercase;
+
+            &::after {
+                vertical-align: bottom;
+                content:'';
+            }
+
+            &.rating--bad {
+                color: darken($color-no,60%);
+
+                &.rating--1 {
+
+                    &::after {
+                        background: darken($color-no,60%);
+                    }
+                }
+
+                &.rating--2 {
+
+                    &::after {
+                        background: linear-gradient(to right, transparent 0%, transparent 74%, $link-color 74%, $link-color 76%, transparent 76%, transparent 100%), linear-gradient(to left, $color-yes 0%, darken(rgba($color-yes,.75),60%) 25%, darken($color-no,60%) 25%, darken($color-no,60%) 60%, transparent 75%);
+                    }
+                }
+            }
+
+            &.rating--good {
+                color: darken($color-yes,60%);
+
+                &.rating--3 {
+
+                    &::after {
+                        background: linear-gradient(to right, darken($color-yes,60%) 50%, darken($color-yes,60%) 65%, transparent 90%);
+                    }
+                }
+
+                &.rating--4 {
+
+                    &::after {
+                        background: darken($color-yes,60%);
+                    }
+                }
+            }
+
+            &.rating--average {
+                color: darken($color-average,20%);
+
+                &::after {
+                    background: $color-average;
+                }
+            }
         }
     }
 
@@ -23,9 +77,12 @@
 
     .requested {
         list-style-type: none;
+        text-align: center;
 
         li {
             font-family: $font-stack-head;
+            line-height: 2;
+            margin-right: 1em;
 
             &::before {
                 margin-right: .25em;
@@ -43,6 +100,7 @@
             }
         }
     }
+
     .requested-yes {
 
         li {
@@ -50,6 +108,10 @@
             &::before {
                 content: 'x ';
                 color: darken($color-yes,40%);
+            }
+
+            &:last-of-type {
+                margin-right: 0;
             }
         }
     }

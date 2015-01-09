@@ -5,6 +5,17 @@ fieldset {
     // border: 0;
 }
 
+button {
+    margin: 0 auto;
+    display: block;
+    width: 15em;
+}
+
+label {
+    display: block;
+    width: 100%;
+}
+
 /* SEARCH FORM(S) */
 
 // general  form
@@ -12,22 +23,13 @@ fieldset {
 form.search {
 
     margin-bottom: $space-s*2;
-
-    button {
-        margin: 0 auto;
-        display: block;
-        width: 15em;
-    }
 }
 
 /* SEARCH A HELPER */
 
 form#search-helper {
 
-    label {
-        display: block;
-        width: 100%;
-    }
+
 
     // request type
 
@@ -310,4 +312,14 @@ form#search-helper {
             }
         }
     }
+}
+
+/* WRITE REQUEST + REGISTER */
+
+form.login {
+
+}
+
+form.register {
+
 }

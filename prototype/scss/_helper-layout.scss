@@ -3,10 +3,11 @@
     padding: 0;
 
     .helper {
+        margin-bottom: $space-s*8;
 
         a.helper__ask {
             display: block;
-            line-height: 2.5;
+            line-height: 2;
             width: 15em;
             margin: 1em auto;
             border: 1px solid $text-color;
@@ -19,15 +20,24 @@
         }
 
         h4 {
-            clear: both;
+            display: none;
+        }
+
+        .rating {
+
+            &::after {
+                display: inline-block;
+                width: 5em;
+                height: 1.5em;
+                border: 1px solid $text-color;
+                margin-left: 1em;
+            }
         }
     }
 
     .location__distance {
 
         a.map-pin {
-
-
 
             svg {
                 border: 1px solid $text-color;
@@ -38,11 +48,14 @@
     }
 
     .helper--pro {
-
+        .switch {
+            margin: 1em;
+        }
     }
 
     .requested {
         padding: 0;
+        display: inline;
 
         li {
             display: inline;

@@ -42,3 +42,14 @@ ul {
         margin-right: .5em;
     }
 }
+
+.overlay {
+    position: fixed;
+    overflow-y: auto;
+    border: 3px solid $text-color;
+    top: $space-s*2;
+    left: $space-s*2;
+    right: $space-s*2;
+    background: rgba($bg-color,.97);
+    padding: 1em .25em;
+}
