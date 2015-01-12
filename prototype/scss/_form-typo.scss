@@ -1,10 +1,13 @@
-        legend {
-            text-align: center;
-            text-transform: uppercase;
-            font-weight: bold;
-            font-size: 2rem;
-        }
+legend {
+    font-size: 2rem;
+}
 
+button {
+        color: $button-txt;
+        text-decoration: none;
+        // text-transform: uppercase;
+        // text-shadow: 3px 3px 4px rgba(#000,.6);
+}
 
 /* SEARCH A HELPER */
 
@@ -26,10 +29,15 @@ form#search-helper {
 
         ul.request__type--reserve {
             text-align: center;
+            margin: 0 auto;
+            padding: .5em;
 
             a {
                 text-decoration: none;
+                vertical-align: middle;
+                color: $text-color;
             }
+
         }
 
         // plus & minus (add & delete) buttons

@@ -15,6 +15,40 @@ body {
     padding: $space-s/2;
     margin: 0 auto;
     border: 1px dotted #ddd;
+    // min-height: 100vh;
+
+        &::after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        background: $bg-body-color $bg-body repeat;
+        z-index: -1;
+        opacity: .05;
+    }
+}
+
+header,
+main,
+footer {
+    max-width: $bp-xl;
+    margin: auto;
+}
+
+main {
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 0;
 }
 
 img {
@@ -35,7 +69,6 @@ ul {
 
 .switch {
     display: block;
-    margin: $space-s*4;
 
     &::before {
         display: inline-block;

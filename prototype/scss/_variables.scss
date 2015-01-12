@@ -1,7 +1,10 @@
 /* FONT-STACK */
 
-$font-stack: Georgia, 'Times New Roman', serif;
-$font-stack-head: Helvetica, Arial, sans-serif;
+// $font-stack: Georgia, 'Times New Roman', serif;
+$font-stack-head: 'Fira Sans', Helvetica, Arial, sans-serif;
+$font-stack: 'Fira Sans', Arial, sans-serif;
+$font-stack-wikilt: 'Slabo 27px', Helvetica, Arial, sans-serif;
+
 
 /* BREAKPOINTS & SPACERS */
 
@@ -40,13 +43,6 @@ $space-s: 8px;
 // $space-l: 8px;
 // $space-xl: 8px;
 
-/* COLORS GENERAL */
-
-$text-color: #555;
-$bg-color: #fff;
-$link-color: #000;
-$headline-color: #333;
-
 /* PROTOTYPE COLORS */
 
 $bg-box: #f1f1f1;
@@ -56,6 +52,40 @@ $form-delete: red;
 $color-no: #ffcec4;
 $color-yes: #edffc4;
 $color-average: #fcc63f;
+
+/* COLORS GENERAL */
+
+$watergreen: #9bc96f;
+$violet: #b048a4;
+
+$text-color: #555;
+$bg-color: #fff;
+$link-color: #000;
+$headline-color: $violet;
+$header-color: #fff;
+
+
+/* BACKGROUNDS */
+
+$bg-body: url('../img/bg-campbell-of-argyle-modern.jpg');
+$bg-body-color: $watergreen;
+
+// $bg-header: url('../img/bg-header-buckle.jpg');
+$bg-header: url('../img/bg-header-tartan.jpg');
+
+$bg-darken: rgba(#000,.75);
+
+/* INTERACTIONS COLORS (:hover, :focus, :active) */
+
+$button-txt: #fff;
+
+$button-color: $watergreen;
+$hover: darken($button-color,10%);
+$active: darken($button-color,20%);
+
+$big-button-color: $violet;
+$big-hover: darken($big-button-color,10%);
+$big-active: darken($big-button-color,20%);
 
 /* HEADLINES */
 

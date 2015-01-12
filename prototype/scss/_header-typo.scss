@@ -1,34 +1,51 @@
+header {
+    color: $header-color;
+}
+
 nav {
     text-align: center;
 
     .logo {
-
-        @include mq(l) {
-            width: 50%;
-            padding-right: 21em;
-            text-align: right;
-        }
+        text-shadow: 3px 3px 4px black;
 
         h1 {
-            font-size: 6rem;
+            font: 6rem/1 $font-stack-wikilt;
 
             @include mq(l) {
-                text-align: right;
+                font-size: 8rem;
             }
 
             a {
                 text-decoration: none;
+                color: $header-color;
             }
         }
 
         .baseline {
             font-family: $font-stack-head;
+
+            @include mq(l) {
+                font-size: 1.33em;
+            }
+
+        }
+    }
+
+    .discover {
+        color: $header-color;
+        text-decoration: none;
+        // text-transform: uppercase;
+        text-shadow: 3px 3px 4px rgba(#000,.6);
+
+        strong {
+            font-weight: 200;
         }
     }
 
     ul {
         font-family: $font-stack-head;
         list-style-type: none;
+        text-shadow: 3px 3px 4px black;
 
         @include mq(l) {
             text-align: left;
@@ -37,6 +54,20 @@ nav {
         a {
             text-decoration: none;
             text-align: center;
+            color: $header-color;
+
+            @include mq(s) {
+
+                &:hover,
+                &:focus {
+                    text-decoration: underline;
+                }
+
+                &:active {
+                }
+
+
+            }
         }
     }
 }

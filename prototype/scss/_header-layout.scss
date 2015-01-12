@@ -1,16 +1,39 @@
 /* NAV */
 
+header {
+    background: $bg-header no-repeat center center;
+    background-size: cover;
+    padding: 0em;
+    position: relative;
+}
+
 nav {
 
+    width: 18em;
+    margin: auto;
+    border: 1px dashed transparent;
+    background: $bg-darken;
+    position: relative;
+
+    @include mq(s) {
+        width: 100%;
+    }
+
+    @include mq(s) {
+    }
+
+
     .logo {
+        width: 15em;
+        margin: 0 auto;
+        padding: 1em;
 
         @include mq(m) {
-            width: 15em;
+            margin: 0;
         }
 
         @include mq(l) {
-            width: 50%;
-            padding-right: 21em;
+            width: 20em;
         }
 
         h1 {
@@ -18,35 +41,86 @@ nav {
         }
 
         .baseline {
-            margin: 0 auto 1em;
+            margin: 0 auto;
+        }
+    }
+
+    .discover {
+        display: block;
+        width: 10em;
+        margin: 1em auto 2em;
+        padding: .5em;
+        background: $button-color;
+        box-shadow: 3px 3px 3px rgba(#000,.6);
+        transition: .25s background linear;
+        border-radius: 6px;
+
+        // border: 1px solid $header-color;
+
+        &:hover,
+        &:focus {
+            background: $hover;
+        }
+
+        &:active {
+            background: $active;
+            position: relative;
+            top: 1px;
+            left: 1px;
         }
     }
 
     ul {
         padding: 0;
+        margin-bottom: 0;
 
-        @include mq(m) {
-            // display: inline-block;
-            padding: 2em 2em;
-            position: absolute;
-            top: 0;
-            right: 0;
+        @include mq(s) {
+            margin: 1em 0;
         }
 
-        @include mq(l) {
-            padding: 0 1em;
-            left: 50%;
-            margin-left: 9em;
+        @include mq(m) {
+            padding: 1em;
+            position: absolute;
+            top: 0em;
+            right: 1em;
+            // background: $bg-darken;
         }
 
         a {
             display: block;
             width: 100%;
             padding: 1em;
+            transition: .25s background linear;
 
             @include mq(s) {
                 display: inline-block;
                 padding: 0 1em;
+                margin: 0 .5em;
+            }
+
+            @include mq(m) {
+                padding: 0 .5em;
+            }
+
+
+            &:hover,
+            &:focus {
+                background: rgba($hover,.6);
+
+                @include mq(s) {
+                    background: none;
+                }
+            }
+
+            &:active {
+                background: rgba($active,.8);
+                position: relative;
+                top: 1px;
+                left: 1px;
+
+                @include mq(s) {
+                    background: none;
+                }
             }
         }
 
@@ -61,8 +135,7 @@ nav {
                 a {
                     border-top: 1px dotted $text-color;
                     @include mq(s) {
-                        border-top: 0;
-                        border-left: 1px dotted $text-color;
+                        border: none;
                     }
                 }
             }

@@ -1,5 +1,27 @@
 # Wikilt
 
+
+## visual stuffs
+
+### typo
+
++ https://www.google.com/fonts#QuickUsePlace:quickUse/Family:Slabo+27px
+
+### pics
+
++ http://www.freebiewebresources.com/2012/11/photoshop-fabric-textures.html
++ http://nicolsonkiltmakers.com/kiltmaking/kiltmaking-how-its-made.html
++ https://www.flickr.com/photos/predofoto/8304441003/in/pool-1923086@N21
++ https://www.youtube.com/watch/?v=a02zjNcWXc4
++ https://www.flickr.com/photos/frontpage251/2943145078/sizes/l
+
++ http://www.bonniekilts.com/custom-kilts.html
+
+### colours
+
++ http://www.colourlovers.com/palette/27905/threadless
+
+
 ## Various notes
 
 ### to do/think
