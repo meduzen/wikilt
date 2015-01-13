@@ -9,11 +9,6 @@ nav {
         text-shadow: 3px 3px 4px black;
 
         h1 {
-            font: 6rem/1 $font-stack-wikilt;
-
-            @include mq(l) {
-                font-size: 8rem;
-            }
 
             a {
                 text-decoration: none;

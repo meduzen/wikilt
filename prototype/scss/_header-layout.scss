@@ -24,7 +24,7 @@ nav {
 
 
     .logo {
-        width: 15em;
+        // width: 15em;
         margin: 0 auto;
         padding: 1em;
 
@@ -38,6 +38,10 @@ nav {
 
         h1 {
             margin: 0 auto;
+
+            img {
+                width: 200px;
+            }
         }
 
         .baseline {
