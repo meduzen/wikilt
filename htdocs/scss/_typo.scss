@@ -1,0 +1,68 @@
+/* GENERAL TYPO */
+
+html{
+    font: normal 62.5%/1.5 $font-stack;
+    color: $text-color;
+    background: $bg-color;
+}
+
+a {
+    color: $link-color;
+    text-decoration: underline;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+legend {
+    color: $headline-color;
+    font-family: $font-stack-head;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+legend {
+    text-align: left;
+}
+
+h2 {
+    font-size: 2.8rem;
+    font-weight: 300;
+}
+
+body {
+    font-size: 1.6rem;
+}
+
+.switch {
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+.switch--show {
+
+    &::before {
+        content:'[+]';
+    }
+}
+
+.switch--hide {
+
+    &::before {
+        content:'[-]';
+    }
+}
+
+.link--big {
+    color: $header-color;
+    text-decoration: none;
+    // text-transform: uppercase;
+    text-shadow: 3px 3px 4px rgba(#000,.6);
+
+    strong {
+        font-weight: 200;
+    }
+}

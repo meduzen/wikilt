@@ -1,0 +1,31 @@
+<ul>
+    <li><a href=""><strong>Messages</strong></a></li>
+    <li><a href="">My account</a></li>
+</ul>
+
+<main>
+    <section>
+        <h2>Messages</h2>
+        <h3>Mr. John Campbell has answered to your request!</h3>
+        <a class="switch switch--show" href="">Sent request</a>
+        <time datetime="2014-01-14T09:42">Today, 9:42 <abbr title="ante meridiem">a.m.</abbr></time>
+        <ul>
+            <li>Price: <strong>£13</strong>.</li>
+            <li>Completion time: <strong>less than a week</strong>.</li>
+            <li><strong>Bring the kilt</strong> to Mr. John Campbell.</li>
+        </ul>
+        <blockquote>Hello mister Drummond. This job is a piece of cake for me, I'm glad to help you. Would you please come this Saturday, or Sunday morning? Thanks, see you soon!</blockquote>
+        
+        <form action="./index-dashboard-2.php" method="post">
+            <fieldset>
+                <legend>Choose a payment method</legend>
+                <label for="hand">By hand<input type="radio" id="hand" name="payment" value="Hand" required></label>
+                <label for="paypal">With Paypal<input type="radio" id="paypal" name="payment" value="Paypal"></label>
+            </fieldset>
+            <label for="note">Free comment (optional)<textarea name="note" id="note" cols="30" rows="3" placeholder="Free note to Mr. John Campbell"></textarea></label>
+            <button>Go to payment</button>
+            <a href="">Decline proposal</a>
+        </form>
+        <small>You have no other message</small>
+    </section>
+</main>

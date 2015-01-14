@@ -1,0 +1,180 @@
+legend {
+    font-size: 2rem;
+}
+
+button {
+        color: $button-txt;
+        text-decoration: none;
+        // text-transform: uppercase;
+        // text-shadow: 3px 3px 4px rgba(#000,.6);
+}
+
+/* SEARCH A HELPER */
+
+
+form#search-helper {
+
+    // request type
+
+    fieldset.request__type {
+
+        ul.request__type--selected {
+            text-align: center;
+
+            li {
+                text-align: left;
+            }
+        }
+
+
+        ul.request__type--reserve {
+            text-align: center;
+            margin: 0 auto;
+            padding: .5em;
+
+            a {
+                text-decoration: none;
+                vertical-align: middle;
+                color: $text-color;
+            }
+
+        }
+
+        // plus & minus (add & delete) buttons
+
+        a.request-delete {
+            font: 0/0 a;
+            text-decoration: none;
+            color: $form-delete;
+
+            &::before {
+                content:'x';
+                font: 1.6rem/1.5 $font-stack;
+                text-align: center;
+            }
+
+            &:hover {
+                color: $link-color;
+            }
+        }
+
+        a.request-add {
+            text-decoration: none;
+            font: 1.6rem/2 $font-stack;
+            text-align: center;
+
+            &::before {
+                content:'+';
+                font: 1.6rem/1.5 $font-stack;
+                text-align: center;
+            }
+        }
+
+        fieldset.request__type--sub {
+            text-align: center;
+
+            a {
+                text-decoration: none;
+            }
+        }
+    }
+    
+    // optional search
+
+    .search__optional {
+
+        // geolocation
+        .search__optional--geo {
+
+            a.geo-detect {
+                text-align: center;
+                vertical-align: bottom;
+
+            }
+
+            [for="location"] {
+                text-align: left;
+            }
+
+            @include mq(l) {
+                // text-align: center;
+            }
+        }
+
+        // transport method
+        .search__optional--transport {
+            text-align: center;
+
+            fieldset {
+                // text-align: center;
+            }
+
+            .sub-legend {
+                text-transform: none;
+                text-align: left;
+                font-weight: bold;
+                color: $text-color;
+                font-size: 1.6rem;
+
+                @include mq(m) {
+                    // text-align: center;
+                }
+            }
+
+            p {
+                text-align: left;
+            }
+
+            label[for^='transport'] {
+                text-align: center;
+            }
+
+            [type="checkbox"] {
+
+                &::after {
+                    content:'No';
+                    text-align: center;
+                    text-transform: uppercase;
+                    font-family: $font-stack-head;
+                    color: darken($color-no,60%);
+                }
+
+                &:checked::after {
+                    content:'Yes';
+                    color: darken($color-yes,60%);
+                }
+            }
+        }
+
+    }
+    button {
+        line-height: 2.5;
+    }
+}
+
+form.login,
+form.register {
+    text-align: center;
+
+    label {
+        text-align: left;
+
+        @include mq(m) {
+            text-align: right;
+        }
+    }
+
+    &>strong {
+        font-size: 2rem;
+        text-align: center;
+        vertical-align: middle;
+    }
+}
+
+form.register {
+
+
+    legend {
+        text-align: center;
+    }
+}

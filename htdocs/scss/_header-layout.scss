@@ -1,0 +1,133 @@
+/* NAV */
+
+header {
+    background: $bg-header no-repeat center center;
+    background-size: cover;
+    padding: 0em;
+    position: relative;
+
+    @include mq(m) {
+        background-image: $bg-header-big;
+    }
+}
+
+nav {
+
+    width: 18em;
+    margin: auto;
+    border: 1px dashed transparent;
+    background: $bg-darken;
+    position: relative;
+
+    @include mq(s) {
+        width: 100%;
+    }
+
+    @include mq(s) {
+    }
+
+
+    .logo {
+        // width: 15em;
+        margin: 0 auto;
+        padding: 1em;
+
+        @include mq(l) {
+            margin: 0;
+            width: 20em;
+        }
+
+        h1 {
+            margin: 0 auto;
+
+            img {
+                width: 200px;
+
+                @include mq(l) {
+                    width: 266px;
+                }
+            }
+        }
+
+        .baseline {
+            margin: 0 auto;
+        }
+    }
+
+    .is-closed ul {
+        max-height: 0;
+        overflow: hidden;
+    }
+
+    ul {
+        padding: 0;
+        margin-bottom: 1em;
+
+        @include mq(s) {
+            margin: 1em 0;
+        }
+
+        @include mq(l) {
+            padding: 1em;
+            position: absolute;
+            top: 0em;
+            right: 1em;
+            // background: $bg-darken;
+        }
+
+        a {
+            display: block;
+            width: 100%;
+            padding: 1em;
+            transition: .25s background linear;
+
+            @include mq(s) {
+                display: inline-block;
+                padding: 0 1em;
+                margin: 0 .5em;
+            }
+
+            @include mq(l) {
+                padding: 0 .5em;
+            }
+
+
+            &:hover,
+            &:focus {
+                background: rgba($hover,.6);
+
+                @include mq(s) {
+                    background: none;
+                }
+            }
+
+            &:active {
+                background: rgba($active,.8);
+                position: relative;
+                top: 1px;
+                left: 1px;
+
+                @include mq(s) {
+                    background: none;
+                }
+            }
+        }
+
+        li {
+
+            @include mq(s) {
+                display: inline-block;
+            }
+
+            &:nth-child(n+2) {
+
+                a {
+                    border-top: 1px dotted $text-color;
+                    @include mq(s) {
+                        border: none;
+                    }
+                }
+            }
+        }
+    }
+}

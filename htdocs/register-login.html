@@ -1,0 +1,38 @@
+<div class="overlay">
+    <h2>Log in to send a request</h2>
+    <form class="login" action="./index-step-4.php" method="post">
+        <a class="login__external" href="">Log in with Facebook</a>
+        <a class="login__external" href="">Log in with Google</a>
+        <strong>or</strong>
+        <fieldset>
+            <legend class="none">Log in</legend>
+            <label for="mail">Mail<input id="mail" name="mail" type="email" autofocus required placeholder="E-mail (name@example.co.uk)"></label>
+            <label for="pword">Password<input id="pword" name="pword" type="password" required placeholder="password"></label>
+            <label for="stay-connected">Remember me on this computer <input id="stay-connected" name="stay-connected" type="checkbox" checked></label>
+        </fieldset>
+        <button>Log in</button>
+        <a href="">Forgot password?</a>
+    </form>
+    <form class="register" action="./index-step-3-validate.php" method="post">
+    <h2>New member? Register</h2>
+        <p>Professional sewer? <a href="">See what we have to offer</a> to your business.</p>
+        <fieldset>
+            <legend>Log in informations</legend>
+            <label for="name">Name<input id="name" name="name" type="text" required placeholder="William Lawson"></label>
+            <label for="mail">Mail<input id="mail" name="mail" type="email" required placeholder="name@example.co.uk)"></label>
+            <label for="pword">Password<input id="pword" name="pword" type="password" required placeholder="password"></label>
+        <fieldset>
+            <legend>Your address</legend>
+            <label for="address-1">Address line 1<input id="address-1" name="address-1" type="text" required placeholder="32, Broughton Street"></label>
+            <label for="address-2">Address line 2 (optional)<input id="address-2" name="address-2" type="text" placeholder=""></label>
+            <label for="postcode">Postcode<input id="postcode" name="postcode" required type="text" placeholder="EH1 3RJ"></label>
+        </fieldset>
+        </fieldset>
+        <fieldset>
+            <legend>I have some sewing skills and I want to propose my help.</legend>
+            <!-- <p>Pick at least one to be part of the Wikilt sewers. That means people will be able to send you a request when they need help.</p> -->
+            <a class="switch switch--show" href="">Learn more</a>
+        </fieldset>
+        <button>Register</button>
+    </form>
+</div>

@@ -1,0 +1,106 @@
+/* FONT-STACK */
+
+// $font-stack: Georgia, 'Times New Roman', serif;
+$font-stack-head: 'Fira Sans', Helvetica, Arial, sans-serif;
+$font-stack: 'Fira Sans', Arial, sans-serif;
+$font-stack-wikilt: 'Slabo 27px', Helvetica, Arial, sans-serif;
+
+
+/* BREAKPOINTS & SPACERS */
+
+// check http://responsivedesign.is/develop/getting-started-with-sass
+
+$bp-s: 32em; // 32 * 16px = 512px
+$bp-m: 48em; // 48 * 16px = 768px
+$bp-l: 64em; // 64 * 16px = 1024 px
+$bp-xl: 80em; // 80 * 16px = 1280 px
+$bp-xxl: 100em; // 100 * 16px = 1600 px
+
+@mixin mq($size) { // summon me with: @include mq {s/m/l/xl/xxl}
+  @if $size == s {
+    @media screen and (min-width: $bp-s) { @content; }
+  }
+
+  @else if $size == m {
+    @media screen and (min-width: $bp-m) { @content; }
+  }
+
+  @else if $size == l {
+    @media screen and (min-width: $bp-l) { @content; }
+  }
+
+  @else if $size == xl {
+    @media screen and (min-width: $bp-xl) { @content; }
+  }
+
+  @else if $size == xxl {
+    @media screen and (min-width: $bp-xxl) { @content; }
+  }
+}
+
+$space-s: 8px;
+// $space-m: 8px;
+// $space-l: 8px;
+// $space-xl: 8px;
+
+/* GENERAL COLORS */
+
+$watergreen: #9bc96f;
+$violet: #b048a4;
+
+$text-color: #555;
+$bg-color: #fff;
+$link-color: #000;
+$headline-color: $violet;
+$header-color: #fff;
+
+/* PROTOTYPE COLORS */
+
+$bg-box: #f1f1f1;
+$bg-line: #ddd;
+$img-gradient: linear-gradient(to bottom right, transparent 0%, transparent 49%, $bg-line 49%,$bg-line 51%, transparent 51%, transparent 100%),linear-gradient(to bottom left, transparent 0%, transparent 49%, $bg-line 49%,$bg-line 51%, transparent 51%, transparent 100%);
+$form-delete: lighten($text-color,20%);
+$color-no: #ffcec4;
+$color-yes: #edffc4;
+$color-average: #fcc63f;
+
+/* BACKGROUNDS */
+
+$bg-body: url('../img/bg-campbell-of-argyle-modern.jpg');
+$bg-body-color: $watergreen;
+
+// $bg-header: url('../img/bg-header-buckle.jpg');
+$bg-header: url('../img/bg-header-tartan.jpg');
+$bg-header-big: url('../img/bg-header-tartan.jpg');
+
+$bg-darken: rgba(#000,.6);
+
+/* INTERACTIONS COLORS (:hover, :focus, :active) */
+
+$button-txt: #fff;
+
+$button-color: $watergreen;
+$hover: darken($button-color,10%);
+$active: darken($button-color,20%);
+$focus-border: $violet;
+
+$big-button-color: $violet;
+$big-hover: darken($big-button-color,10%);
+$big-active: darken($big-button-color,20%);
+
+/* HEADLINES */
+
+
+
+/* LINKS */
+
+$link-on: #000;
+$link-active: #888;
+
+/* NAV */
+
+
+
+/* SHADOWS */
+
+$shadow-s: 0 5px 11px 0px lighten($text-color,10%);

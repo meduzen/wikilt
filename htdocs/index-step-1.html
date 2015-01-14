@@ -1,0 +1,49 @@
+<main>
+    <form id="search-helper" class="search" action="index-step-2.php" method="get">
+        <h2>Find helpers</h2>
+
+        <!-- repair types -->
+        <fieldset class="request__type">
+            <legend>Pick service(s)</legend>
+            <ul class="request__type--selected">
+                <li>Kilt apron reduction <a class="request-delete" href="">delete</a></li>
+                <li>Buckles and straps extenders <a class="request-delete" href="">delete</a></li>
+                <li>Sporran: closure press stud replacement <a class="request-delete" href="">delete</a></li>
+                <li>Buckles and straps extenders <a class="request-delete" href="">delete</a></li>
+                <li>Sporran repair <a class="request-delete" href="">delete</a></li>
+            </ul>
+            <a class="request-add" href="./index-step-1-add.php">Add elements</a>
+        </fieldset>
+
+        <!-- search options -->
+        <a class="switch switch--hide" href="">Hide search options</a>
+        <div class="search__optional">
+
+            <!-- geolocation -->
+            <fieldset class="search__optional--geo">
+                <legend>Find helpers around me</legend>
+                <label for="location">Postcode or town/city:<input type="text" name="location" id="location" placeholder="e.g. &#39;G40 1HG&#39; or &#39;Glasgow&#39;"><a class="link--big geo-detect" href="" title="Detect my location"><img src="./img/icon-geolocalize-ns.png" height="19" width="20" alt=""></a></label>
+            </fieldset>
+
+            <!-- transport -->
+            <fieldset class="search__optional--transport">
+                <legend>Transport method</legend>
+                <p><em>The more you can choose, the best results you'll have.</em></p>
+                <fieldset>
+                    <legend class="sub-legend">How to pass the kilt to the helper?</legend>
+                    <label for ="transport-bring">I can bring it to the helper<input type="checkbox" checked name="transport-bring" id="transport-bring"></label>
+                    <label for ="transport-pick">The helper can pick the kilt at my home<input type="checkbox" checked name="transport-pick" id="transport-pick"></label>
+                    <label for ="transport-post">I'll send my kilt by post<input type="checkbox" name="transport-post" id="transport-post"></label>
+                </fieldset>
+                <fieldset>
+                    <legend class="sub-legend">How to get your kilt back?</legend>
+                    <label for ="transport-pick-done">I can get it back at the helper<input type="checkbox" checked name="transport-pick-done" id="transport-pick-done"></label>
+                    <label for ="transport-bring-done">The helper can bring it back to me<input type="checkbox" checked name="transport-bring-done" id="transport-bring-done"></label>
+                    <label for ="transport-post-done">Use post<input type="checkbox" name="transport-post-done" id="transport-post-done"></label>
+                </fieldset>
+            </fieldset>
+        </div>
+
+        <button>Search helpers</button>
+    </form>
+</main>

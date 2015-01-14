@@ -1,0 +1,59 @@
+header {
+    color: $header-color;
+}
+
+nav {
+    text-align: center;
+
+    .logo {
+        text-shadow: 3px 3px 4px black;
+
+        h1 {
+
+            a {
+                text-decoration: none;
+                color: $header-color;
+            }
+        }
+
+        .baseline {
+            font-family: $font-stack-head;
+
+            @include mq(l) {
+                font-size: 1.33em;
+            }
+
+        }
+    }
+
+    ul {
+        font-family: $font-stack-head;
+        list-style-type: none;
+        text-shadow: 3px 3px 4px black;
+
+        @include mq(l) {
+            text-align: left;
+        }
+
+        a {
+            text-decoration: none;
+            text-align: center;
+            color: $header-color;
+
+            @include mq(s) {
+
+                &:hover,
+                &:focus {
+                    text-decoration: underline;
+                }
+
+                &:active {
+                }
+            }
+
+            &.pro {
+                color: #ff9d00;
+            }
+        }
+    }
+}

@@ -1,0 +1,95 @@
+.helpers__list {
+
+    padding: 0;
+    margin-top: $space-s*4;
+
+    .helper {
+        margin-bottom: $space-s*8;
+
+        @include mq(m)
+        {
+            width: 45%;
+            // display: inline-block;
+            float: left;
+            padding: 0;
+            margin: 1em;
+        }
+
+        h3 {
+            border-bottom: 1px solid $headline-color;
+        }
+
+        a.helper__ask {
+            display: block;
+            line-height: 2;
+            width: 15em;
+            margin: 1em auto;
+            border: 1px solid $text-color;
+            padding: .75em;
+        }
+
+        img.helper__pic {
+            float: left;
+            margin: 0 1em 1em 0;
+        }
+
+        h4 {
+            display: none;
+        }
+
+        // .rating {
+
+        //     &::after {
+        //         display: inline-block;
+        //         width: 5em;
+        //         height: 1.5em;
+        //         border: 1px solid $text-color;
+        //         margin-left: 1em;
+        //     }
+        // }
+    }
+
+    .location__town {
+
+        a.map-pin {
+            // display: block;
+            // width: 3em;
+            // height: 3em;
+            // vertical-align: baseline
+        }
+    }
+
+    .helper--pro {
+        .switch {
+            margin: 1em;
+        }
+    }
+
+    .requested {
+        padding: 0;
+        display: inline;
+        margin: auto;
+
+        li {
+            display: inline;
+            padding: .25em .75em;
+            border-radius: .75em;
+        }
+    }
+
+    .requested-no {
+        padding: 0;
+
+        li {
+            background: $color-no;
+        }
+    }
+
+    .requested-yes {
+        padding: 0;
+
+        li {
+            background: $color-yes;
+        }
+    }
+}

@@ -1,0 +1,476 @@
+fieldset {
+    margin: $space-s;
+    padding: 0;
+    margin: 0 auto;
+    background: transparent;
+    border: none;
+}
+
+button {
+    width: 15em;
+    display: block;
+    margin: 1em auto 2em;
+    padding: .5em;
+    background: $big-button-color;
+    box-shadow: 3px 3px 6px rgba(#000,.3);
+    transition: .25s background linear;
+    border: 1px solid $text-color;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+
+    &:hover,
+    &:focus {
+        background: $big-hover;
+    }
+
+    &:active {
+        background: $big-active;
+        position: relative;
+        top: 1px;
+        left: 1px;
+        box-shadow: 2px 2px 6px rgba(#000,.3);
+    }
+}
+
+label {
+    display: block;
+    width: 100%;
+}
+
+[type="text"],
+[type="email"],
+[type="password"] {
+    width: 18em;
+    height: 2em;
+    padding: 0 .5em;
+    margin-top: $space-s/2;
+    border: 1px solid $text-color;
+
+    @include mq(l) {
+        width: 16em;
+    }
+
+
+    &:focus {
+        outline: none;
+        outline: 2px solid $focus-border;
+    }
+}
+
+/* SEARCH FORM(S) */
+
+// general  form
+
+form.search {
+    margin-bottom: $space-s*2;
+}
+
+/* SEARCH A HELPER */
+
+form#search-helper {
+
+    .switch {
+        margin: $space-s*3 auto $space-s*2;
+    }
+
+
+
+    // request type
+
+    fieldset.request__type {
+
+        margin-bottom: $space-s;
+
+        ul.request__type--selected {
+            padding: $space-s;
+            list-style-type: none;
+            margin: $space-s auto;
+
+            li {
+                margin: 1em 0;
+                padding: .25em .5em;
+                border: 1px dotted $text-color;
+
+                @include mq(m) {
+                    width: 48%;
+                    float: left;
+                    margin-right: 2%;
+                    border: 1px dotted $text-color; 
+                }
+
+                @include mq(l) {
+                    width: 31%;
+                    margin-right: 1em;
+                }
+            }
+
+            @include mq (m) {
+                margin-bottom: 0;
+                padding-bottom: 0;
+                width: 100%;
+            }
+        }
+
+        ul.request__type--reserve {
+            padding: 0;
+            clear: both;
+
+            a {
+                display: block;
+                margin: .25em;
+                border: 1px solid $button-color;
+                width: 8em;
+                height: 3.5em;
+                float: left;
+                padding: .25em;
+                position: relative;
+                // overflow: hidden;
+
+                background: none;
+                transition: .25s background linear;
+                border-radius: 6px;
+
+
+                &:hover,
+                &:focus {
+                    background: $hover;
+                }
+
+                &:active {
+                    background: $active;
+                    position: relative;
+                    top: 1px;
+                    left: 1px;
+                }
+            }
+
+            li {
+                display: inline-block;
+            }
+        }
+
+        fieldset.request__type--sub {
+
+            ul {
+                padding: 0;
+            }
+
+            a {
+                display: block;
+                margin: .25em;
+                border: 1px solid $text-color;
+                width: 8em;
+                height: 3.5em;
+                float: left;
+                padding: .25em;
+
+                &.return {
+                    font: 0/0 a;
+                    border: none;
+                    margin: auto;
+                    float: none;
+
+                    &::after {
+                        content: '←';
+                        display: block;
+                        width: 4em;
+                        height: 2.5em;
+                        font: 1.6rem/1.5 $font-stack;
+                        padding: .25em;
+                        border: 1px solid $text-color;
+                    }
+                }
+            }
+
+            li {
+                display: inline-block;
+            }
+        }
+
+        // plus & minus (add & delete) buttons
+
+        a.request-delete {
+            position: relative;
+            float: right;
+
+            &::before {
+                border: 1px solid $form-delete;
+                padding: 0 .3em;
+            }
+
+            &:hover::before {
+                border-color: $link-color;
+            }
+        }
+
+        a.request-add {
+            position: relative;
+            border: 1px dashed $text-color;
+            display: block;
+            margin: 0 $space-s $space-s*2;
+            padding: 0 .25em;
+
+            &::before {
+                border: none;
+                padding: 0 .5em 0 0;
+            }
+
+            @include mq(m) {
+                display: inline-block;
+                width: 48%;
+                float: left;
+                margin: 1em 0;
+            }
+
+            @include mq(l) {
+                width: 31%;
+                // vertical-align: top;
+            }
+        }
+    }
+    
+    // optional search
+
+    .search__optional {
+
+        // border: 1px solid $text-color;
+        margin-bottom: $space-s*2;
+        width: 100%;
+        padding: $space-s;
+
+        @include mq(l) {
+            padding-bottom: 1px;
+        }
+
+        fieldset {
+            margin-bottom: $space-s*5;
+            border: 0;
+            margin: auto;
+
+            @include mq(l) {
+            }
+        }
+
+        .search__optional--geo {
+
+            @include mq(l) {
+                width: 31%;
+                float: left;
+            }
+
+            a.geo-detect {
+                margin: 0 0 0 .5em;
+                display: inline-block;
+                padding: 6px 0 0;
+                height: 2em;
+                width: 2em;
+                box-shadow: none;
+                position: absolute;
+                left: 18em;
+                bottom: 0;
+
+
+                @include mq(l) {
+                    left: 16em;
+                }
+
+                img {
+                }
+            }
+
+            [for="location"] {
+                margin: 1em auto;
+                position: relative;
+
+                input {
+                    display: block;
+                    // width: 100%;
+                    // height: 2em;
+                    // padding: 0 .5em;
+                }
+
+                @include mq(m) {
+                    width: 48%;
+                    display: inline-block;
+                }
+
+                @include mq(l) {
+                    width: 100%;
+                }
+
+            }
+
+            .googlemap {
+                margin: 1em auto;
+                width: 100%;
+            }
+        }
+
+        // transport method
+        .search__optional--transport {
+            margin-bottom: $space-s*0;
+
+                @include mq(l) {
+                    width: 66%;
+                }
+
+            fieldset {
+                margin-bottom: $space-s*2;
+
+                @include mq(m) {
+                    padding: .25em;
+                    width: 48%;
+                    display: inline-block;
+                    vertical-align: top;
+                }
+            }
+
+            .sub-legend {
+                padding-left: 0;
+            }
+
+            p {
+                @include mq(m) {
+                    padding: 0 $space-s*2;
+                }
+            }
+
+            label[for^='transport'] {
+                position: relative;
+                display: inline-block;
+                vertical-align: middle;
+                margin: .25em;
+                width: 8em;
+                height: 7em;
+                padding: .25em;
+                z-index: 1; // required for checkbox background
+                border: 1px solid $text-color;
+
+                &:hover {
+                    outline: 2px solid $focus-border;
+                }
+
+                &:hover,
+                &:focus {
+                    border: none;
+                }
+            }
+
+            [type="checkbox"] {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                z-index: -1; // required for checkbox background
+
+                &:focus {
+                    outline: 2px solid $focus-border;
+                }
+
+
+                &::after {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    background: $bg-color;
+                    // border-radius: 6px;
+                    padding-top: 5em;
+                }
+
+                &:focus::after {
+                    background: $color-no;
+                }
+
+                &:checked:focus::after {
+                    background: $color-yes;
+                }
+            }
+
+            li {
+                display: inline-block;
+            }
+        }
+    }
+}
+
+/* WRITE REQUEST + REGISTER */
+
+form.login,
+form.register {
+    input {
+        display: block;
+        margin: 0 0 $space-s*2;
+
+        @include mq(s) {
+            margin: 0 auto $space-s*2;
+        }
+
+        @include mq(m) {
+            display: inline;
+            margin-right: 35%;
+            margin-left: 1em;
+        }
+
+    }
+
+    label {
+        margin: 0 auto $space-s*2;
+        width: 18em;
+
+        @include mq(m) {
+            width: 80%;
+        }
+    }
+
+    .login__external {
+        display: block;
+
+    }
+
+    &>strong {
+        display: block;
+        border-radius: 50%;
+        border: 1px solid $text-color;
+        width: 2em;
+        height: 2em;
+        margin: 1em auto;
+        padding-top: .25em;
+    }
+
+    [for="stay-connected"] {
+        input {
+            display: inline;
+        }
+    }
+
+    button {
+        margin-bottom: $space-s*2;
+    }
+}
+
+form.register {
+    margin-top: $space-s*4;
+    padding-top: $space-s*4;
+    border-top: 2px solid $text-color;
+
+    legend {
+        padding-top: 1em;
+    }
+
+    fieldset {
+
+        @include mq(l) {
+            // // display: inline-block;
+            // width: 50%;
+            // // float: left;
+        }
+    }
+}
+
+
+
+
